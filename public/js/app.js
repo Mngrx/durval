@@ -1922,6 +1922,69 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -1995,7 +2058,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n#assinatura[data-v-61a7c374] {\r\n    height: 82px;\n}\n.margin[data-v-61a7c374] {\r\n    margin-left: 10%;\r\n    margin-right: 10%;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n#assinatura[data-v-61a7c374] {\r\n    height: 82px;\n}\n.botao-ligar[data-v-61a7c374] {\r\n    /* width: 235px; */\r\n    padding: 8px 20px 8px 20px;\r\n    height: 37px;\r\n    border-radius: 7px;\r\n    background-image: linear-gradient(-10deg, #f7931d 0%, #f5c501 100%);\n}\n.margin[data-v-61a7c374] {\r\n    margin: auto;\n}\n.caixa-newsletter[data-v-61a7c374] {       \r\n    height: 125px;\r\n    background-image: linear-gradient(-10deg, #f7931d 0%, #f5c501 100%);\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -20660,6 +20723,13 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _vm._m(1),
+      _vm._v(" "),
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
       _c(
         "GmapMap",
         {
@@ -20683,7 +20753,7 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(1)
+      _vm._m(2)
     ],
     1
   )
@@ -20693,38 +20763,196 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "margin" }, [
+    return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-sm-12 text-center" }, [
           _c("h2", [_vm._v("NOSSOS"), _c("strong", [_vm._v(" PARCEIROS")])])
         ])
-      ]),
-      _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-sm-6" }, [
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("h3", [_c("strong", [_vm._v("A CASA")])]),
-            _vm._v("\n                    História"),
-            _c("br"),
-            _vm._v("\n                    A casa hoje"),
-            _c("br"),
-            _vm._v("\n                    História"),
-            _c("br"),
-            _vm._v("\n                    História"),
-            _c("br"),
-            _vm._v("\n                    História"),
-            _c("br"),
-            _vm._v("\n                    História"),
-            _c("br"),
-            _vm._v("\n                    História"),
-            _c("br")
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-sm-4" }, [
+              _c("h6", [_vm._v("A CASA")]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("História")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("A casa hoje")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Missão")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Diretoria")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Setores")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Equipe")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Depoimentos")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Resultados")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Prêmios")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-4" }, [
+              _c("h6", [_vm._v("COLABORE")]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Doação Legal")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Alugue o auditório")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Seja um voluntário")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _vm._v("Doação de cupom fiscal")
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _vm._v("Compre nossos produtos")
+              ]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Faça sua doação")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [
+                _vm._v("Outras formas de doação")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-4" }, [
+              _c("h6", [_vm._v("MÍDIA")]),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Notícias")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Fotos")]),
+              _c("br"),
+              _vm._v(" "),
+              _c("h6", [_vm._v("DIAGNÓSTICO PRECOCE")]),
+              _vm._v(" "),
+              _c("h6", [_vm._v("PROJETOS")]),
+              _vm._v(" "),
+              _c("h6", [_vm._v("PARCEIROS")]),
+              _vm._v(" "),
+              _c("h6", [_vm._v("FALE CONOSCO")])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-6" }, [
+          _c(
+            "div",
+            { staticClass: "caixa-newsletter container align-middle" },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-12 text-center" }, [
+                  _vm._v("\n                            ASSINE NOSSO "),
+                  _c("strong", [_vm._v("INFORMATIVO")])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row text-center" }, [
+                _c("br"),
+                _vm._v(" "),
+                _c("form", [
+                  _c("div", { staticClass: "form-row align-items-center" }, [
+                    _c("div", { staticClass: "col-auto" }, [
+                      _c(
+                        "label",
+                        { staticClass: "sr-only", attrs: { for: "nome" } },
+                        [_vm._v("Nome")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control mb-2",
+                        attrs: {
+                          type: "text",
+                          name: "nome",
+                          id: "email-input",
+                          placeholder: "Nome"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-auto" }, [
+                      _c(
+                        "label",
+                        { staticClass: "sr-only", attrs: { for: "email" } },
+                        [_vm._v("Email")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control mb-3",
+                        attrs: {
+                          type: "email",
+                          name: "email",
+                          id: "email-input",
+                          placeholder: "Email"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-auto" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-outline-light mb-3 text-center",
+                          attrs: { type: "submit" }
+                        },
+                        [_vm._v("Enviar")]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12" }, [
+              _c("h4", [_vm._v("ENDEREÇO")]),
+              _vm._v(" "),
+              _c("address", [
+                _vm._v(
+                  "\n                            Rua Clementino Câmara, 234 - Barro Vermelho - Natal/RN - CEP 59030-330 "
+                ),
+                _c("br"),
+                _vm._v(
+                  "\n                            marketing@casadurvalpaiva.org.br\n                        "
+                )
+              ])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }),
+          _c("div", { staticClass: "row" }),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" })
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12" }, [
+              _c("a", { staticClass: "botao-ligar", attrs: { href: "#" } }, [
+                _vm._v("(84) 4006-1600 | LIGAR")
+              ])
+            ])
+          ])
         ])
       ])
     ])
