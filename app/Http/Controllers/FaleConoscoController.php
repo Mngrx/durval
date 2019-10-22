@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\FaleConosco;
 use App\Mail\EmailFaleConosco;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 /**
@@ -78,8 +79,8 @@ class FaleConoscoController extends Controller
             'message' => 'Sua mensagem foi enviada com sucesso!' 
         ];
 
-        return new EmailFaleConosco($dados);
+        Mail::to('igornogueir@gmail.com')->send(new EmailFaleConosco($dados));
         
-        response()->json($resposta, 201);
+        return response()->json($resposta, 201);
     }
 }
