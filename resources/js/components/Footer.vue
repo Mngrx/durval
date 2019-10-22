@@ -82,6 +82,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
+                         <img src="/img/instagram.png" alt="">                                   
                         </div>
                     </div>
                     <div class="row">
