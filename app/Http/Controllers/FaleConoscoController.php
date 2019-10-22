@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\FaleConosco;
 use App\Mail\EmailFaleConosco;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
+use Throwable;
 
 /**
  * Controller para gerenciar as operações na tela de Fale Conosco
@@ -71,16 +73,27 @@ class FaleConoscoController extends Controller
             
             return response()->json($resposta, 422);
         }
+        try {
 
-        $faleConosco = FaleConosco::create($dados);
-        
-        $resposta = [
-            'status' => TRUE,
-            'message' => 'Sua mensagem foi enviada com sucesso!' 
-        ];
+            DB::beginTransaction();
 
-        Mail::to('igornogueir@gmail.com')->send(new EmailFaleConosco($dados));
+            $faleConosco = FaleConosco::create($dados);
         
-        return response()->json($resposta, 201);
+            $resposta = [
+                'status' => TRUE,
+                'message' => 'Sua mensagem foi enviada com sucesso!' 
+            ];
+
+            Mail::to('igornogueir@gmail.com')->send(new EmailFaleConosco($dados));
+            
+            DB::commit();
+
+            return response()->json($resposta, 201);
+        } catch(Throwable $e) {
+            DB::rollBack();
+
+            return response()->json('Erro para enviar email ou salvar no banco.', 500);
+        }            
+        
     }
 }
