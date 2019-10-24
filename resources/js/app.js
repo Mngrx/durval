@@ -20,8 +20,8 @@ Vue.use(VueGoogleMaps, {
     load: {
       key: 'AIzaSyApry6-guKlTww7-_k5RVZXRefvXjkIHSY',
       libraries: 'places',
-     
-    },   
+
+    },
   })
 
 // const files = require.context('./', true, /\.vue$/i)
@@ -30,6 +30,7 @@ Vue.use(VueGoogleMaps, {
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('header-component', require('./components/Header.vue').default);
 Vue.component('footer-component', require('./components/Footer.vue').default);
+Vue.component('contato-view', require('./views/Contato.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

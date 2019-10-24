@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 // Variables
 @import 'variables';
@@ -7,7 +8,28 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    font-size: 10px;
+}
+
 .navbar-laravel {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+a:hover {
+    color: rgb(226, 130, 40);
+    text-decoration: none;
+}
+
+a {
+    color: rgb(60, 60, 60);
+}
+
+h6 > a{
+    color: rgb(20, 20, 20);
+    font-weight: bolder;
+    font-size: 10px;
 }

@@ -5,16 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-        
+
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-       
+
     </head>
     <body>
-        
-        <div id="app">
-            <header-component></header-component>
-            <example-component></example-component>
-            <footer-component></footer-component>
+
+        <div id="app" class="jumbotron-fluid bg-white">
+            <contato-view></contato-view>
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>
