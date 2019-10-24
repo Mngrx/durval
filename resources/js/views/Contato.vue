@@ -1,15 +1,14 @@
 <template>
     <div>
         <header-component></header-component>
-        <div class="fachada">
-            <div class="container">
-                <div class="row h-100">
-                    <div class="fachada-texto col-10 my-auto">
-                        <span class="texto-principal"><a href="#">A CASA</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="barra">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="texto-secundario">FALE CONOSCO</span>
-                    </div>
-                    <div class="col-2">
 
-                    </div>
+        <div class="container mr-3 fachada">
+            <div class="row h-100">
+                <div class="fachada-texto col-10 my-auto">
+                    <span class="texto-principal"><a href="#">A CASA</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="barra">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="texto-secundario">FALE CONOSCO</span>
+                </div>
+                <div class="col-2">
+
                 </div>
             </div>
         </div>
@@ -70,7 +69,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 botao-confirma">
-
+                        <input type="submit" value="ENVIAR MENSAGEM" id="btn-enviar" name="enviar" class="button btn text-white">
                     </div>
                 </div>
             </form>
@@ -89,9 +88,21 @@ export default {
 
 <style lang="scss" scoped>
 
+#btn-enviar {
+    background-color:#e9551a;
+    border-radius: 20px;
+    width: 20%;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
 .fachada {
     background-color:#eeeeee;
     height: 165px;
+    // padding-right-width: 100px;
+    // border-right-color: rgba(180, 180, 180, 0.9);
+    // border-right-style: solid;
+
 }
 
 .fachada-texto {

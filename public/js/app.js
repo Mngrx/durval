@@ -2119,7 +2119,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -2155,7 +2154,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".fachada[data-v-3a4d955b] {\n  background-color: #eeeeee;\n  height: 165px;\n}\n.fachada-texto[data-v-3a4d955b] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.texto-principal[data-v-3a4d955b] {\n  font-size: 36px;\n}\n.barra[data-v-3a4d955b] {\n  font-size: 30px;\n  color: #bbb;\n}\n.texto-secundario[data-v-3a4d955b] {\n  font-size: 20px;\n  color: #aaa;\n}", ""]);
+exports.push([module.i, "#btn-enviar[data-v-3a4d955b] {\n  background-color: #e9551a;\n  border-radius: 20px;\n  width: 20%;\n  align-self: flex-end;\n  font-weight: bold;\n}\n.fachada[data-v-3a4d955b] {\n  background-color: #eeeeee;\n  height: 165px;\n}\n.fachada-texto[data-v-3a4d955b] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.texto-principal[data-v-3a4d955b] {\n  font-size: 36px;\n}\n.barra[data-v-3a4d955b] {\n  font-size: 30px;\n  color: #bbb;\n}\n.texto-secundario[data-v-3a4d955b] {\n  font-size: 20px;\n  color: #aaa;\n}", ""]);
 
 // exports
 
@@ -21297,23 +21296,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "fachada" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row h-100" }, [
-          _c("div", { staticClass: "fachada-texto col-10 my-auto" }, [
-            _c("span", { staticClass: "texto-principal" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("A CASA")])
-            ]),
-            _vm._v("    "),
-            _c("span", { staticClass: "barra" }, [_vm._v("/")]),
-            _vm._v("    "),
-            _c("span", { staticClass: "texto-secundario" }, [
-              _vm._v("FALE CONOSCO")
-            ])
+    return _c("div", { staticClass: "container mr-3 fachada" }, [
+      _c("div", { staticClass: "row h-100" }, [
+        _c("div", { staticClass: "fachada-texto col-10 my-auto" }, [
+          _c("span", { staticClass: "texto-principal" }, [
+            _c("a", { attrs: { href: "#" } }, [_vm._v("A CASA")])
           ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-2" })
-        ])
+          _vm._v("    "),
+          _c("span", { staticClass: "barra" }, [_vm._v("/")]),
+          _vm._v("    "),
+          _c("span", { staticClass: "texto-secundario" }, [
+            _vm._v("FALE CONOSCO")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-2" })
       ])
     ])
   },
@@ -21440,7 +21437,17 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-12 botao-confirma" })
+          _c("div", { staticClass: "col-12 botao-confirma" }, [
+            _c("input", {
+              staticClass: "button btn text-white",
+              attrs: {
+                type: "submit",
+                value: "ENVIAR MENSAGEM",
+                id: "btn-enviar",
+                name: "enviar"
+              }
+            })
+          ])
         ])
       ]),
       _vm._v(" "),
