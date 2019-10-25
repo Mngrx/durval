@@ -97,10 +97,10 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                         <a href="https://www.instagram.com/"><img :src="'img/instagram.png'" width="24" height="24" alt="" class="rede-social"></a>
-                         <a href="https://www.facebook.com/"><img :src="'img/facebook.png'" width="24" height="24" alt="" class="rede-social"></a>
-                         <a href="https://twitter.com/"><img :src="'img/twitter.png'" width="24" height="24" alt="" class="rede-social"></a>
-                         <a href="https://www.youtube.com/"><img :src="'img/youtube.png'" width="24" height="24" alt="" class="rede-social"></a>
+                            <a href="https://www.instagram.com/"><img :src="'img/instagram.png'" width="24" height="24" alt="" class="rede-social"></a>
+                            <a href="https://www.facebook.com/"><img :src="'img/facebook.png'" width="24" height="24" alt="" class="rede-social"></a>
+                            <a href="https://twitter.com/"><img :src="'img/twitter.png'" width="24" height="24" alt="" class="rede-social"></a>
+                            <a href="https://www.youtube.com/"><img :src="'img/youtube.png'" width="24" height="24" alt="" class="rede-social"></a>
                         </div>
                     </div>
                     <div class="row">

@@ -1,14 +1,15 @@
 <template>
     <div>
         <header-component></header-component>
-
-        <div class="container fachada">
-            <div class="row h-100">
-                <div class="fachada-texto col-10 my-auto">
-                    <span class="texto-principal"><a href="#">A CASA</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="barra">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="texto-secundario">FALE CONOSCO</span>
-                </div>
-                <div class="col-2">
-                    <img :src="'img/mascote.png'" alt="Mascote Durval Paiva">
+        <div class="container-flex fachada">
+            <div class="container fachada">
+                <div class="row h-100">
+                    <div class="fachada-texto col-10 my-auto">
+                        <span class="texto-principal"><a href="#">A CASA</a></span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="barra">/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="texto-secundario">FALE CONOSCO</span>
+                    </div>
+                    <div class="col-2">
+                        <img :src="'img/mascote.png'" alt="Mascote Durval Paiva">
+                    </div>
                 </div>
             </div>
         </div>
@@ -17,13 +18,13 @@
             <h3>Entre em contato conosco através do formulário abaixo.</h3>
             <h6>Escolha o setor e mande sua mensagem.</h6>
             <br>
-            <form @submit="enviarMensagem">
+            <form @submit="enviarMensagem" id="fale-conosco">
                 <div class="row">
                     <div class="col-7">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="nome" class="required">Nome</label>
+                                    <label for="nome" class="required">Nome *</label>
                                     <input type="text" class="form-control" id="nome" name="nome" v-model="data.nome">
                                 </div>
                             </div>
@@ -38,7 +39,7 @@
                             <div class="col-3">
                                 <div class="form-group">
                                     <label for="telefone" class="required">Telefone</label>
-                                    <input type="text" class="form-control" id="telefone" name="telefone" v-model="data.telefone">
+                                    <input v-mask="['(##) ####-####', '(##) #####-####']" type="text" class="form-control" id="telefone" name="telefone" v-model="data.telefone">
                                 </div>
                             </div>
                             <div class="col-2">
@@ -64,9 +65,9 @@
                         </div>
                     </div>
                     <div class="col-5">
-                        <div class="h-75">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea class="form-control h-50" id="mensagem" name="mensagem" v-model="data.mensagem"></textarea>
+                        <div class="h-auto">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" v-model="data.mensagem"></textarea>
                         </div>
                     </div>
                 </div>
@@ -120,17 +121,19 @@
 </template>
 
 <script>
+import {mask} from 'vue-the-mask'
 export default {
+    directives: { mask },    
     data() {
         return {
             data: {
-                nome: null,
-                email: null,
-                telefone: null,
-                uf: null,
-                cidade: null,
-                setor: null,
-                mensagem: null,
+                nome: '',
+                email: '',
+                telefone: '',
+                uf: '',
+                cidade: '',
+                setor: '',
+                mensagem: '',
             },
             output: '',
         };
@@ -144,9 +147,12 @@ export default {
             )
             .then(function (response) {
                 currentObj.output = response.data.message;
+                alert(response.data.message);
+                window.location.reload(); 
             })
             .catch(function (error) {
-                currentObj.output = error.response.data.message;
+                // currentObj.output = error.response.data.message;
+                alert(error.response.data.message);
             });
         }
     }

@@ -39,7 +39,20 @@ class FaleConoscoController extends Controller
      * @return void
      */
     public function create(Request $request) {
+        
         $dados = $request->all();
+        
+        $dados = [
+            'nome' => $dados['nome'] ?? '' ,
+            'email' => $dados['email'] ?? '',
+            'uf' => $dados['uf'] ?? '',
+            'cidade' => $dados['cidade'] ?? '',
+            'setor' => $dados['setor'] ?? '',
+            'telefone' => $dados['telefone'] ?? '',
+            'mensagem' => $dados['mensagem'] ?? ''
+        ];
+
+        $resposta = [];        
 
         $validator = Validator::make(
             $dados,
@@ -53,12 +66,16 @@ class FaleConoscoController extends Controller
                 'mensagem' => 'required'
             ]
         );
-        $resposta = [];
+    
         if($validator->fails()) {
+
+            $mensagem = 'Verifique os seguintes itens: ';
+
+            $mensagem .= $validator->errors()->first();
 
             $resposta = [
                 'status' => FALSE,
-                'message' => $validator->messages()
+                'message' => $mensagem
             ];
 
             return response()->json($resposta, 422);
