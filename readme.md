@@ -10,34 +10,34 @@ Foi utilizado Laravel + VueJS com auxílio da plataforma Laravel Mix.
 
 Supondo que a máquina tenha git, docker e docker-compose instalados, comece clonando o projeto para uma pasta, e depois clone o laradock para a pasta em que o projeto está contido.
 
-''' bash
+```bash
 
     $ git clone https://github.com/laradock/laradock
 
-'''
+```
 
 Que ficará da seguinte forma:
 
-'''
+```
     /<pastadoprojeto>
         |- durval
         |- laradock
-'''
+```
 
 Após, acesse a pasta 'laradock' pelo terminal e execute:
 
-''' bash
+```bash
     
     $ cp env-exemple .env
     $ docker-compose up -d apache2 mysql
 
-'''
+```
 
 Utilizando seu SGBD de preferência, crie uma schema chamada 'durvalpaiva' no MySQL que está rodando no container recém criado.
 
 Ainda na pasta do laradock, execute:
 
-''' bash
+```bash
     
     $ docker-compose exec --user=laradock workspace bash
     $ cd durval
@@ -45,7 +45,7 @@ Ainda na pasta do laradock, execute:
     $ php artisan key:generate
     $ php artisan migrate
 
-'''
+```
 
 Pronto, acesse no seu navegador o de preferência o seguinte site: http://localhost/public/durval. Se tudo ocorreu bem, você verá na tela a página 'Fale Conosco'
 
