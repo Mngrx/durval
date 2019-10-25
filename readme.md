@@ -47,7 +47,7 @@ Ainda na pasta do laradock, execute:
 
 ```
 
-Pronto, acesse no seu navegador o de preferência o seguinte site: http://localhost/public/durval. Se tudo ocorreu bem, você verá na tela a página 'Fale Conosco'
+Pronto, acesse no seu navegador o de preferência o seguinte site: http://localhost/durval/public . Se tudo ocorreu bem, você verá na tela a página 'Fale Conosco'
 
 
 ## Dúvidas ocorridas durante o projeto
