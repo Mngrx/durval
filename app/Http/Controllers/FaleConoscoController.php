@@ -29,6 +29,13 @@ class FaleConoscoController extends Controller
         return view('fale-conosco');
     }
 
+    public function all() {
+       
+        $mensagens = FaleConosco::all();
+
+        return view('fale-conosco-lista')->with(['mensagens' => $mensagens]);
+    }
+
     /**
      * Representa o envio da mensagem feita pelo usuário
      *

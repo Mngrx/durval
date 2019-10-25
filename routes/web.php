@@ -16,4 +16,5 @@
  *
  */
 Route::get('/', 'FaleConoscoController@index');
+Route::get('/mensagens', 'FaleConoscoController@all');
 Route::post('/create', 'FaleConoscoController@create');
