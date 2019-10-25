@@ -13,7 +13,7 @@
 
 /*
  * As rotas estão simplificadas por ser apenas uma página
- * 
+ *
  */
 Route::get('/', 'FaleConoscoController@index');
-Route::get('/create', 'FaleConoscoController@create');
+Route::post('/create', 'FaleConoscoController@create');

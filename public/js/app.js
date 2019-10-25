@@ -2119,7 +2119,72 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      data: {
+        nome: null,
+        email: null,
+        telefone: null,
+        uf: null,
+        cidade: null,
+        setor: null,
+        mensagem: null
+      },
+      output: ''
+    };
+  },
+  methods: {
+    enviarMensagem: function enviarMensagem(e) {
+      e.preventDefault();
+      var currentObj = this;
+      axios.post('create', this.data).then(function (response) {
+        currentObj.output = response.data.message;
+      })["catch"](function (error) {
+        currentObj.output = error.response.data.message;
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -2154,7 +2219,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#btn-enviar[data-v-3a4d955b] {\n  background-color: #e9551a;\n  border-radius: 20px;\n  width: 20%;\n  align-self: flex-end;\n  font-weight: bold;\n}\n.fachada[data-v-3a4d955b] {\n  background-color: #eeeeee;\n  height: 165px;\n}\n.fachada-texto[data-v-3a4d955b] {\n  margin-top: auto;\n  margin-bottom: auto;\n}\n.texto-principal[data-v-3a4d955b] {\n  font-size: 36px;\n}\n.barra[data-v-3a4d955b] {\n  font-size: 30px;\n  color: #bbb;\n}\n.texto-secundario[data-v-3a4d955b] {\n  font-size: 20px;\n  color: #aaa;\n}", ""]);
+exports.push([module.i, "textarea[data-v-3a4d955b] {\n  min-height: 100%;\n}\n#btn-enviar[data-v-3a4d955b] {\n  background-color: #e9551a;\n  border-radius: 20px;\n  width: 20%;\n  align-self: flex-end;\n  font-weight: bold;\n}\n#mensagem[data-v-3a4d955b] {\n  height: 80%;\n}\n.botao-confirma[data-v-3a4d955b] {\n  display: inline;\n  -webkit-box-align: right;\n          align-items: right;\n}\n.fachada[data-v-3a4d955b] {\n  background-color: #eeeeee;\n  height: 165px;\n}\n.fachada-texto[data-v-3a4d955b] {\n  display: inline;\n}\n.contatos[data-v-3a4d955b] {\n  margin-bottom: 10%;\n}\n.texto-principal > a[data-v-3a4d955b] {\n  font-size: 36px;\n  color: #3c3c3c;\n}\n.barra[data-v-3a4d955b] {\n  font-size: 30px;\n  color: #bbb;\n}\n.texto-secundario[data-v-3a4d955b] {\n  font-size: 20px;\n  color: #aaa;\n}", ""]);
 
 // exports
 
@@ -21282,9 +21347,278 @@ var render = function() {
     [
       _c("header-component"),
       _vm._v(" "),
-      _vm._m(0),
+      _c("div", { staticClass: "container fachada" }, [
+        _c("div", { staticClass: "row h-100" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-2" }, [
+            _c("img", {
+              attrs: { src: "img/mascote.png", alt: "Mascote Durval Paiva" }
+            })
+          ])
+        ])
+      ]),
       _vm._v(" "),
-      _vm._m(1),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "container bg-white" }, [
+        _c("h3", [
+          _vm._v("Entre em contato conosco através do formulário abaixo.")
+        ]),
+        _vm._v(" "),
+        _c("h6", [_vm._v("Escolha o setor e mande sua mensagem.")]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("form", { on: { submit: _vm.enviarMensagem } }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-7" }, [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-12" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "label",
+                      { staticClass: "required", attrs: { for: "nome" } },
+                      [_vm._v("Nome")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.nome,
+                          expression: "data.nome"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "nome", name: "nome" },
+                      domProps: { value: _vm.data.nome },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "nome", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-7" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "label",
+                      { staticClass: "required", attrs: { for: "email" } },
+                      [_vm._v("Email")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.email,
+                          expression: "data.email"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "email", id: "email", name: "email" },
+                      domProps: { value: _vm.data.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "email", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-3" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "label",
+                      { staticClass: "required", attrs: { for: "telefone" } },
+                      [_vm._v("Telefone")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.telefone,
+                          expression: "data.telefone"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "telefone", name: "telefone" },
+                      domProps: { value: _vm.data.telefone },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "telefone", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-2" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "label",
+                      { staticClass: "required", attrs: { for: "uf" } },
+                      [_vm._v("UF")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.uf,
+                          expression: "data.uf"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        id: "uf",
+                        maxlength: "2",
+                        name: "uf"
+                      },
+                      domProps: { value: _vm.data.uf },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "uf", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-7" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "label",
+                      { staticClass: "required", attrs: { for: "cidade" } },
+                      [_vm._v("Cidade")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.cidade,
+                          expression: "data.cidade"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "cidade", name: "cidade" },
+                      domProps: { value: _vm.data.cidade },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "cidade", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-5" }, [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c(
+                      "label",
+                      { staticClass: "required", attrs: { for: "setor" } },
+                      [_vm._v("Setor")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.setor,
+                          expression: "data.setor"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "setor", name: "setor" },
+                      domProps: { value: _vm.data.setor },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.data, "setor", $event.target.value)
+                        }
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-5" }, [
+              _c("div", { staticClass: "h-75" }, [
+                _c("label", { attrs: { for: "mensagem" } }, [
+                  _vm._v("Mensagem")
+                ]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.data.mensagem,
+                      expression: "data.mensagem"
+                    }
+                  ],
+                  staticClass: "form-control h-50",
+                  attrs: { id: "mensagem", name: "mensagem" },
+                  domProps: { value: _vm.data.mensagem },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.data, "mensagem", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", [
+            _vm._v("\n                " + _vm._s(_vm.output) + "\n            ")
+          ]),
+          _vm._v(" "),
+          _vm._m(1)
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _vm._m(2)
+      ]),
       _vm._v(" "),
       _c("footer-component")
     ],
@@ -21296,162 +21630,100 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mr-3 fachada" }, [
-      _c("div", { staticClass: "row h-100" }, [
-        _c("div", { staticClass: "fachada-texto col-10 my-auto" }, [
-          _c("span", { staticClass: "texto-principal" }, [
-            _c("a", { attrs: { href: "#" } }, [_vm._v("A CASA")])
-          ]),
-          _vm._v("    "),
-          _c("span", { staticClass: "barra" }, [_vm._v("/")]),
-          _vm._v("    "),
-          _c("span", { staticClass: "texto-secundario" }, [
-            _vm._v("FALE CONOSCO")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-2" })
-      ])
+    return _c("div", { staticClass: "fachada-texto col-10 my-auto" }, [
+      _c("span", { staticClass: "texto-principal" }, [
+        _c("a", { attrs: { href: "#" } }, [_vm._v("A CASA")])
+      ]),
+      _vm._v("    "),
+      _c("span", { staticClass: "barra" }, [_vm._v("/")]),
+      _vm._v("    "),
+      _c("span", { staticClass: "texto-secundario" }, [_vm._v("FALE CONOSCO")])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container bg-white" }, [
-      _c("form", { attrs: { action: "" } }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-7" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-12" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "label",
-                    { staticClass: "required", attrs: { for: "nome" } },
-                    [_vm._v("Nome")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", id: "nome", name: "nome" }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-7" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "label",
-                    { staticClass: "required", attrs: { for: "email" } },
-                    [_vm._v("Email")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "email", id: "email", name: "email" }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-3" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "label",
-                    { staticClass: "required", attrs: { for: "telefone" } },
-                    [_vm._v("Telefone")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", id: "telefone", name: "telefone" }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-2" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "label",
-                    { staticClass: "required", attrs: { for: "uf" } },
-                    [_vm._v("UF")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "uf",
-                      maxlength: "2",
-                      name: "uf"
-                    }
-                  })
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-7" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "label",
-                    { staticClass: "required", attrs: { for: "cidade" } },
-                    [_vm._v("Cidade")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", id: "cidade", name: "cidade" }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-5" }, [
-                _c("div", { staticClass: "form-group" }, [
-                  _c(
-                    "label",
-                    { staticClass: "required", attrs: { for: "setor" } },
-                    [_vm._v("Setor")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "form-control",
-                    attrs: { type: "text", id: "setor", name: "setor" }
-                  })
-                ])
-              ])
-            ])
+    return _c("div", { staticClass: "d-flex justify-content-end" }, [
+      _c("input", {
+        staticClass: "button btn text-white",
+        attrs: {
+          type: "submit",
+          value: "ENVIAR MENSAGEM",
+          id: "btn-enviar",
+          name: "enviar"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container contatos" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-sm-3" }, [
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("strong", [_c("em", [_vm._v("Presidente")])]),
+            _c("br")
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-5" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "texto" } }, [_vm._v("Mensagem")]),
-              _vm._v(" "),
-              _c("textarea", {
-                staticClass: "form-control",
-                attrs: { id: "texto", name: "texto", rows: "7.8" }
-              })
-            ])
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c(
+              "a",
+              { attrs: { href: "mailto:diretoria@casadurvalpaiva.org.br" } },
+              [_vm._v("diretoria@casadurvalpaiva.org.br")]
+            )
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-12 botao-confirma" }, [
-            _c("input", {
-              staticClass: "button btn text-white",
-              attrs: {
-                type: "submit",
-                value: "ENVIAR MENSAGEM",
-                id: "btn-enviar",
-                name: "enviar"
-              }
-            })
+        _c("div", { staticClass: "col-sm-3" }, [
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("strong", [_c("em", [_vm._v("Gerente Executivo")])]),
+            _c("br")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c(
+              "a",
+              { attrs: { href: "mailto:social@casadurvalpaiva.org.br" } },
+              [_vm._v("social@casadurvalpaiva.org.br")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-3" }, [
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("strong", [_c("em", [_vm._v("Marketing")])]),
+            _c("br")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c(
+              "a",
+              { attrs: { href: "mailto:marketing@casadurvalpaiva.org.br" } },
+              [_vm._v("marketing@casadurvalpaiva.org.br")]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-3" }, [
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c("strong", [_c("em", [_vm._v("Supervisor Administrativo")])]),
+            _c("br")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex justify-content-center" }, [
+            _c(
+              "a",
+              {
+                attrs: { href: "mailto:administracao@casadurvalpaiva.org.br" }
+              },
+              [_vm._v("administracao@casadurvalpaiva.org.br")]
+            )
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("hr")
+      ])
     ])
   }
 ]

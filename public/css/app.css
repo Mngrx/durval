@@ -11106,9 +11106,16 @@ body {
   font-size: 10px;
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+h3 {
+  color: #3c3c3c;
+}
+
+h6 {
+  color: #999999;
+}
+
+h6 > strong {
+  color: #3c3c3c;
 }
 
 a:hover {
@@ -11117,12 +11124,17 @@ a:hover {
 }
 
 a {
-  color: #3c3c3c;
+  color: #999999;
 }
 
 h6 > a {
-  color: #141414;
+  color: #3c3c3c;
   font-weight: bolder;
   font-size: 10px;
+}
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
